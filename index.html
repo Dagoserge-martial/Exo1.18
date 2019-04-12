@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exo 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="annimate.css">
+</head>
+<body>
+    <div class="container">
+    <nav class="navbar" id="navb"> 
+        <a href="#" class="active">Mosaic</a>
+        <a href="#" class="a1">Contact</a>
+        <a href="#" class="a1">Blog</a>
+        <a href="#" class="a1">Team</a>
+        <a href="#" class="a1">Service</a>
+        <a href="#" class="a1">Projet</a>
+        <a href="#" class="a1">About</a>
+        <a href="#" class="a1">Homme</a>
+        <a href="#" class="icon" onclick="myFunction()">&#9776; Menu</a>
+    </nav>
+
+    <section class="sect">
+        <div class="container">
+            <div class="titre">
+                <h1 class="titre1 fadeIn">We Create Amazone <br> Architecture <br> Designs</h1>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a <br> paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                <button>We out work</button>
+            </div>
+            <div class="vide fadeIn"></div>
+        </div>
+    </section>
+    <section class="sect">
+        <div class="container">
+            <div class="titre">
+                <h1 class="titre fadeIn">We Love <br> Modernes Designs</h1>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a <br> paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                <button>We out work</button>
+            </div>
+            <div class="vide1 fadeIn"> </div>
+        </div>
+    </section>
+</div>
+
+
+    <script type="text/javascript">
+       function myFunction(){
+           var x = document.getElementById('navb');
+           if (x.className === 'navbar') {
+               x.className += ' responsive';
+           }else {
+               x.className = 'navbar';
+           }
+       }
+
+       var myIndex = 0;
+            carousel();
+
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("sect");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; 
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block"; 
+            setTimeout(carousel, 8000);    
+            }
+    </script>
+    
+</body>
+</html>

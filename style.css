@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+}
+body{
+    margin: 0 280px;
+}
+.navbar{
+    overflow: hidden;
+    background: #ffffff;
+}
+.navbar a{
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+.navbar a.active {
+    float: left;
+    font-size: 40px;
+    font-weight: 900;
+}
+.navbar a.a1{
+   float: right;
+   padding: 30px 10px;
+}
+.navbar a.icon{
+    display: none;
+}
+.sect .titre{
+    width: 80%;
+    position: relative;
+    z-index: 3;
+}
+.sect .titre h1{
+    font-size: 70px;
+    font-weight: 900;
+    margin: 10px 0 10px 25px;
+    line-height: 1.5;
+    letter-spacing: 5px;
+}
+.titre p{
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.sect .vide{
+    height: 750px;
+    width: 760px;
+    background: url(image/img1.jpg) 50% 50% no-repeat;
+    top: 0;
+    position: absolute;
+    z-index: -10;
+    margin-top: 35px;
+    margin-left: 35%;
+}
+.sect .vide1{
+    height: 750px;
+    width: 760px;
+    background: url(image/img2.jpg) 50% 50% no-repeat;
+    top: 0;
+    position: absolute;
+    z-index: -10;
+    margin-top: 35px;
+    margin-left: 35%;
+}
+.titre button{
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    background: rgb(10, 68, 255);
+    border-radius: 50px;
+    border: 0;
+    color: #ffffff;
+}
+@media screen and (max-width: 1780px){
+   body{
+       margin: 0 190px;
+   }
+}
+@media screen and (max-width: 1400px){
+    body{
+        margin: 0 50px 0 40px;
+    }
+}
+@media screen and (max-width: 960px){
+    body{
+        margin: 0px;
+    }
+}
+@media screen and (max-width: 767px){
+   .navbar {
+       background: #000000;
+       padding-right: 20px;
+   }
+   .navbar a{
+       color: #ffffff;
+   }
+   .navbar a:not(:first-child){
+       display: none;
+   }
+   .navbar a.icon{
+       display: block;
+       columns: #ffffff;
+       float: right;
+       margin-top: 16px;
+   }
+   .sect .titre h1{
+       line-height: 1;
+       letter-spacing: 1px;
+       font-size: 60px;
+   }
+   h1,p{
+       color: blue;
+       margin-left: 20px;
+   }
+   .sect .titre{
+       text-align: center;
+   }
+   .sect .vide{
+       width: 570px;
+       height: 600px;
+       margin-left: 20px;
+       margin-top: 45px;
+   }
+   .sect .vide1{
+        width: 570px;
+        height: 600px;
+        margin-left: 20px;
+        margin-top: 45px;
+}
+}
+@media screen and (max-width: 767px){
+	.navbar .responsive{
+		position: relative;
+	}
+	.navbar.responsive a.icon{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.navbar.responsive a{
+		float: none;
+		text-align: left;
+        display: block;
+        padding: 10px 25px;
+	}
+}
+.fadeIn {
+	animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
